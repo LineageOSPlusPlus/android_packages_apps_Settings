@@ -463,4 +463,7 @@
         <item quantity="one">Turn off when no device connected for <xliff:g id="DURATION">%1$d</xliff:g> minute</item>
     </plurals>
     <string name="wifi_hotspot_auto_off_timeout_never">Never turn off hotsopt</string>
+      
+    <!-- Screenshot shutter -->
+    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
 </resources>
