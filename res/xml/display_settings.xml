@@ -340,6 +340,11 @@
         android:summary="@string/lockscreen_power_menu_disabled_summary"
         android:defaultValue="true" />
 
+    <ListPreference
+        android:key="display_cutout_emulation"
+        android:title="@string/display_cutout_emulation"
+        settings:keywords="@string/display_cutout_emulation_keywords" />
+
     <Preference
         android:key="traffic"
         android:order="-10"
@@ -376,6 +381,48 @@
             android:key="double_tap_sleep_lockscreen"
             android:title="@string/double_tap_sleep_anywhere_title"
             android:summary="@string/double_tap_sleep_anywhere_summary"
+            android:defaultValue="true" />
+
+    <PreferenceCategory
+        android:title="@string/flashlight_category">
+
+    <com.android.settings.widget.preferences.SystemSettingListPreference
+            android:key="flashlight_on_call"
+            android:title="@string/flashlight_on_call_title"
+            android:entries="@array/flashlight_on_call_entries"
+            android:entryValues="@array/flashlight_on_call_values"
+            android:defaultValue="0" />
+
+    <com.android.settings.widget.preferences.SystemSettingSwitchPreference
+            android:key="flashlight_on_call_ignore_dnd"
+            android:title="@string/flashlight_on_call_ignore_dnd_title"
+            android:summary="@string/flashlight_on_call_ignore_dnd_summary"
+            android:defaultValue="false" /> 
+
+    <com.android.settings.widget.preferences.CustomSeekBarPreference
+            android:key="flashlight_on_call_rate"
+            android:title="@string/flashlight_on_call_rate_title"
+            android:summary="@string/flashlight_on_call_rate_summary"
+            android:max="5"
+            settings:min="1"
+            settings:defaultValue="1"
+            settings:units="Hz" />
+
+    </PreferenceCategory>
+
+
+    <com.android.settings.widget.preferences.SystemSettingSwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_success_vib_title"
+            android:summary="@string/fprint_success_vib_summary"
+            android:persistent="true"
+            android:defaultValue="true" />
+
+    <com.android.settings.widget.preferences.SystemSettingSwitchPreference
+            android:key="fingerprint_error_vib"
+            android:title="@string/fprint_error_vib_title"
+            android:summary="@string/fprint_error_vib_summary"
+            android:persistent="true"
             android:defaultValue="true" />
 
 </PreferenceScreen>
